@@ -51,5 +51,7 @@ jobs:
             echo "No data changes."
           else
             git commit -m "Update Liquipedia data"
+            git fetch origin main
+            git rebase origin/main
             git push
           fi
