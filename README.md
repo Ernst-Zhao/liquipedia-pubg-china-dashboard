@@ -1,6 +1,7 @@
 # 中国 PUBG 战队历年成绩与奖金看板
 
 基于 Liquipedia PUBG Wiki 整理的中国战队赛事成绩和奖金可视化看板。
+https://ernst-zhao.github.io/liquipedia-pubg-china-dashboard/
 
 ## 功能
 
