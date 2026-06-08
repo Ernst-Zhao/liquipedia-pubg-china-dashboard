@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>中国 PUBG 战队历年成绩与奖金看板</title>
+  <style>
+    :root {
+      --bg: #080b10;
+      --panel: #11161e;
+      --panel-2: #171e28;
+      --line: #26303d;
+      --text: #f4f7fa;
+      --muted: #96a1ae;
+      --lime: #c6ff3d;
+      --cyan: #61e5ff;
+      --orange: #ff9254;
+      --red: #ff5f69;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(97,229,255,.09), transparent 28rem),
+        radial-gradient(circle at 88% 2%, rgba(198,255,61,.08), transparent 30rem),
+        var(--bg);
+      font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    .shell { width: min(1440px, calc(100% - 40px)); margin: 0 auto; padding: 34px 0 60px; }
+    header { display: flex; justify-content: space-between; gap: 28px; align-items: flex-end; margin-bottom: 30px; }
+    .eyebrow { color: var(--lime); font: 700 12px/1.2 monospace; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 9px 0 10px; font-size: clamp(30px, 4.4vw, 62px); line-height: .98; letter-spacing: -.045em; max-width: 880px; }
+    .lead { margin: 0; max-width: 780px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .stamp { flex: 0 0 auto; border-left: 1px solid var(--line); padding-left: 24px; color: var(--muted); font: 12px/1.7 monospace; }
+    .stamp b { color: var(--text); }
+    .notice { border: 1px solid #4a4c2c; background: rgba(198,255,61,.055); padding: 12px 16px; color: #dbe6bd; font-size: 12px; line-height: 1.6; margin-bottom: 18px; }
+    .grid { display: grid; gap: 16px; }
+    .kpis { grid-template-columns: repeat(4, 1fr); margin-bottom: 16px; }
+    .main { grid-template-columns: 1.55fr 1fr; margin-bottom: 16px; }
+    .panel { background: rgba(17,22,30,.92); border: 1px solid var(--line); border-radius: 4px; padding: 20px; overflow: hidden; }
+    .kpi { min-height: 132px; position: relative; }
+    .kpi::after { content: ""; position: absolute; right: 16px; top: 16px; width: 8px; height: 8px; background: var(--lime); box-shadow: 0 0 18px var(--lime); }
+    .kpi-label { color: var(--muted); font: 700 11px/1.4 monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .kpi-value { margin-top: 16px; font-size: clamp(25px, 3vw, 42px); font-weight: 800; letter-spacing: -.04em; }
+    .kpi-note { margin-top: 7px; color: var(--muted); font-size: 12px; }
+    .panel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; margin-bottom: 18px; }
+    h2 { margin: 0; font-size: 16px; letter-spacing: -.01em; }
+    .panel-note { color: var(--muted); font-size: 11px; }
+    #trend { width: 100%; height: 310px; display: block; overflow: visible; }
+    .axis { stroke: #34404d; stroke-width: 1; }
+    .gridline { stroke: #26303d; stroke-width: 1; stroke-dasharray: 3 5; }
+    .line { fill: none; stroke: var(--lime); stroke-width: 3; }
+    .area { fill: url(#areaGradient); }
+    .dot { fill: var(--bg); stroke: var(--lime); stroke-width: 2; }
+    .axis-label { fill: #7f8a97; font: 11px monospace; }
+    .bars { display: grid; gap: 15px; max-height: 310px; overflow: auto; padding-right: 8px; }
+    .bar-row { display: grid; grid-template-columns: 105px 1fr 82px; gap: 12px; align-items: center; font-size: 12px; }
+    .bar-track { height: 8px; background: #202a35; overflow: hidden; }
+    .bar-fill { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--lime)); }
+    .bar-value { text-align: right; font: 12px monospace; }
+    .filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+    select, input {
+      color: var(--text); background: #0d1218; border: 1px solid var(--line);
+      border-radius: 2px; padding: 10px 12px; font: 12px inherit; outline: none;
+    }
+    input { min-width: 240px; flex: 1; }
+    select:focus, input:focus { border-color: var(--cyan); }
+    .table-wrap { overflow: auto; max-height: 590px; border-top: 1px solid var(--line); }
+    table { width: 100%; border-collapse: collapse; min-width: 820px; }
+    th { position: sticky; top: 0; z-index: 2; background: #11161e; color: var(--muted); text-align: left; font: 700 10px monospace; letter-spacing: .08em; text-transform: uppercase; padding: 13px 10px; }
+    td { border-top: 1px solid #202934; padding: 12px 10px; font-size: 12px; vertical-align: middle; }
+    tbody tr:hover { background: rgba(97,229,255,.035); }
+    .money {
+      color: var(--lime);
+      font-family: monospace;
+      font-size: 14px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: .015em;
+      line-height: 1.35;
+      white-space: nowrap;
+    }
+    #resultsBody .money { font-size: 15px; text-shadow: 0 0 14px rgba(198,255,61,.12); }
+    #resultsBody .money .dual-money { gap: 4px; }
+    #resultsBody .money .dual-money small {
+      color: var(--cyan);
+      font-family: monospace;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .place { font-weight: 800; }
+    .place.win { color: var(--lime); }
+    .tier { display: inline-block; min-width: 51px; padding: 3px 6px; text-align: center; border: 1px solid #34404d; color: #b9c4cf; font: 10px monospace; }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .foot-grid { grid-template-columns: 1fr 1fr; margin-top: 16px; }
+    .directory { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { border: 1px solid var(--line); color: #b9c4cf; padding: 6px 8px; font-size: 11px; }
+    .chip.covered { border-color: #4f6433; color: var(--lime); background: rgba(198,255,61,.04); }
+    .notes { color: var(--muted); font-size: 12px; line-height: 1.75; }
+    .notes strong { color: var(--text); }
+    .empty { color: var(--muted); padding: 28px 10px; text-align: center; }
+    .analysis-grid { grid-template-columns: 1fr; margin-bottom: 16px; }
+    .compare-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .compare-chip {
+      border: 1px solid var(--line); background: #0d1218; color: var(--muted);
+      padding: 7px 10px; border-radius: 2px; font-size: 11px; cursor: pointer;
+    }
+    .compare-chip.active { color: var(--text); border-color: var(--chip-color); box-shadow: inset 3px 0 var(--chip-color); }
+    .compare-chip:disabled { opacity: .38; cursor: not-allowed; }
+    #compareChart { width: 100%; height: 360px; display: block; overflow: visible; }
+    .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px; color: var(--muted); font-size: 11px; }
+    .legend i { display: inline-block; width: 16px; height: 3px; margin-right: 6px; vertical-align: middle; }
+    .matrix-wrap { overflow: auto; max-height: 650px; border-top: 1px solid var(--line); }
+    .matrix { min-width: 1250px; }
+    .matrix th, .matrix td { text-align: right; white-space: nowrap; }
+    .matrix th:first-child, .matrix td:first-child { text-align: left; position: sticky; left: 0; z-index: 1; background: #11161e; }
+    .matrix thead th:first-child { z-index: 3; }
+    .matrix .official { color: var(--lime); font-weight: 800; }
+    .matrix .detail-total { color: var(--cyan); }
+    .matrix .missing { color: #56616e; }
+    .matrix .peak { background: rgba(198,255,61,.075); color: #e8ffc0; }
+    .coverage-badge { display: inline-block; margin-left: 7px; padding: 2px 5px; border: 1px solid var(--line); color: var(--muted); font: 9px monospace; }
+    .coverage-badge.ok { color: var(--lime); border-color: #4f6433; }
+    .summary-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 0 0 16px; }
+    .summary-cell { background: #0d1218; border: 1px solid var(--line); padding: 12px; }
+    .summary-cell span { color: var(--muted); display: block; font-size: 10px; margin-bottom: 6px; }
+    .summary-cell b { font: 700 15px monospace; }
+    .filter-summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 0 0 16px; }
+    .filter-summary .summary-cell:first-child { border-color: #4f6433; background: rgba(198,255,61,.045); }
+    .filter-summary .summary-cell:first-child b { color: var(--lime); font-size: 20px; }
+    .context-tip { margin: -4px 0 16px; padding: 11px 13px; border-left: 3px solid var(--cyan); background: rgba(97,229,255,.055); color: #b8c8d3; font-size: 11px; line-height: 1.65; }
+    .context-tip strong { color: var(--text); }
+    .currency-switch { display: inline-flex; gap: 4px; padding: 4px; border: 1px solid var(--line); background: #0d1218; }
+    .currency-btn { border: 0; background: transparent; color: var(--muted); padding: 8px 12px; cursor: pointer; font: 700 11px monospace; }
+    .currency-btn.active { color: #071006; background: var(--lime); }
+    .dual-money { display: inline-flex; flex-direction: column; gap: 2px; white-space: nowrap; }
+    .dual-money small { color: var(--cyan); font: 10px monospace; }
+    @media (max-width: 900px) {
+      header { align-items: flex-start; flex-direction: column; }
+      .stamp { border: 0; padding: 0; }
+      .kpis { grid-template-columns: repeat(2, 1fr); }
+      .main, .foot-grid { grid-template-columns: 1fr; }
+      .summary-strip { grid-template-columns: repeat(2, 1fr); }
+      .filter-summary { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 22px, 1440px); padding-top: 22px; }
+      .kpis { grid-template-columns: 1fr; }
+      .panel { padding: 15px; }
+      .bar-row { grid-template-columns: 88px 1fr 70px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <div class="eyebrow">Liquipedia / PUBG / China</div>
+        <h1>中国 PUBG 战队<br>历年成绩与奖金</h1>
+        <p class="lead">基于 Liquipedia PUBG Wiki 团队页与 Results 页整理。聚焦端游 PUBG，不包含 PUBG Mobile / 和平精英；奖金统一按页面标注的美元值展示。</p>
+      </div>
+      <div class="stamp">
+        DATA SNAPSHOT<br><b>2026-06-08</b><br>
+        CURRENCY<br>
+        <div class="currency-switch" id="currencySwitch">
+          <button class="currency-btn active" data-currency="USD">USD</button>
+          <button class="currency-btn" data-currency="CNY">CNY</button>
+          <button class="currency-btn" data-currency="DUAL">双币</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="notice">
+      同步完成：Liquipedia “Chinese Teams” 分类中的 34 支队伍均已有年度奖金数据，共 1,393 条赛事记录。32 支来自完整 Results 页面；EDward Gaming 和 JD Gaming 因没有独立 Results 子页，使用官方 Overview 成绩表。
+    </div>
+
+    <section class="grid kpis">
+      <article class="panel kpi"><div class="kpi-label">中国队伍当前统计奖金</div><div class="kpi-value" id="totalPrize">-</div><div class="kpi-note">年度明细优先，缺失队伍使用排名页快照</div></article>
+      <article class="panel kpi"><div class="kpi-label">已同步赛事明细</div><div class="kpi-value" id="eventCount">-</div><div class="kpi-note">官方 Results 表完整记录</div></article>
+      <article class="panel kpi"><div class="kpi-label">已同步冠军</div><div class="kpi-value" id="winCount">-</div><div class="kpi-note">明细中名次为 1st 的记录</div></article>
+      <article class="panel kpi"><div class="kpi-label">总奖金覆盖</div><div class="kpi-value" id="teamCount">-</div><div class="kpi-note">全部中国队伍 / 国家队页面</div></article>
+    </section>
+
+    <section class="grid main">
+      <article class="panel">
+        <div class="panel-head"><h2>中国战队年度奖金趋势</h2><span class="panel-note">34 支队伍 / 1,393 条记录</span></div>
+        <svg id="trend" viewBox="0 0 760 310" preserveAspectRatio="none"></svg>
+      </article>
+      <article class="panel">
+        <div class="panel-head"><h2>当前统计总奖金排行</h2><span class="panel-note">年度明细优先，34 支可滚动查看</span></div>
+        <div class="bars" id="teamBars"></div>
+      </article>
+    </section>
+
+    <section class="grid analysis-grid">
+      <article class="panel">
+        <div class="panel-head">
+          <h2>战队历年奖金变化对比</h2>
+          <span class="panel-note">选择 1–6 支已有年度明细的队伍</span>
+        </div>
+        <div class="compare-controls" id="compareControls"></div>
+        <div class="summary-strip" id="compareSummary"></div>
+        <svg id="compareChart" viewBox="0 0 1180 360" preserveAspectRatio="none"></svg>
+        <div class="legend" id="compareLegend"></div>
+      </article>
+
+      <article class="panel">
+        <div class="panel-head">
+          <h2>各战队历年奖金统计矩阵</h2>
+          <span class="panel-note">当前统计总计以年度明细为准；排名页仅作快照校验</span>
+        </div>
+        <div class="context-tip">
+          <strong>为什么会有差额？</strong>
+          当前统计总计是截至 2026-06-08 的 Results / Overview 赛事奖金逐条求和；排名页快照来自较早的 Organization Money Ranking 索引。两者可能因更新时间、旧赛事或附加奖金收录、战队更名与页面修订不同而产生差异。正数通常表示当前明细包含较新赛事，负数通常表示排名页包含当前成绩表未展开的历史或附加项目；约 ±$1 的差异多为历史汇率换算或取整。
+        </div>
+        <div class="matrix-wrap">
+          <table class="matrix">
+            <thead id="matrixHead"></thead>
+            <tbody id="matrixBody"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head"><h2>赛事成绩明细</h2><span class="panel-note" id="resultCount"></span></div>
+      <div class="filters">
+        <select id="teamFilter"><option value="">全部队伍</option></select>
+        <select id="yearFilter"><option value="">全部年份</option></select>
+        <select id="tierFilter"><option value="">全部级别</option></select>
+        <input id="searchInput" placeholder="搜索队伍或赛事，例如 17Gaming…">
+      </div>
+      <div class="filter-summary" id="filterSummary"></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>日期</th><th>队伍</th><th>名次</th><th>级别</th><th>赛事</th><th>奖金</th><th>来源</th></tr></thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="grid foot-grid">
+      <article class="panel">
+        <div class="panel-head"><h2>中国战队名录</h2><span class="panel-note">Liquipedia 分类页共 34 个页面</span></div>
+        <div class="directory" id="directory"></div>
+      </article>
+      <article class="panel notes">
+        <div class="panel-head"><h2>口径与来源</h2></div>
+        <p><strong>范围：</strong>仅 Liquipedia PUBG Wiki 端游项目。名录来自 <a href="https://liquipedia.net/pubg/Category:Chinese_Teams" target="_blank" rel="noreferrer">Category:Chinese Teams</a>。</p>
+        <p><strong>总奖金：</strong>34 支队伍均以当前 Results 或 Overview 成绩明细之和为主要统计口径，并使用 <a href="https://liquipedia.net/pubg/Portal:Statistics/Team_earnings" target="_blank" rel="noreferrer">Organization Money Ranking</a> 快照进行差额校验。</p>
+        <p><strong>差额：</strong>Results 与排名页更新时间及收录范围可能不同。正数通常表示 Results 已包含较新的赛事；负数通常表示排名页包含旧记录、附加奖金或 Results 未展开项目。</p>
+        <p><strong>人民币：</strong>按赛事年份的 USD/CNY 年平均汇率估算，逐年换算后求和。2017–2025 使用 <a href="https://fred.stlouisfed.org/series/AEXCHUS" target="_blank" rel="noreferrer">FRED AEXCHUS</a> 日均值的年度平均；2026 使用截至 6 月 5 日年内平均值 6.8803。仅有总计的队伍暂按 2025 年汇率估算。</p>
+        <p><strong>明细：</strong>“Results完整”来自独立 Results 表全部行；“主页成绩”用于没有独立 Results 子页的 EDward Gaming 和 JD Gaming；Prize 为“-”时按 0 处理。</p>
+        <p><strong>核验：</strong>每条记录均链接至对应 Liquipedia 团队 Results 或 Overview 页面，可逐条回查。</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script>
+    const sources = {
+      "17 Gaming": "https://liquipedia.net/pubg/17_Gaming/Results",
+      "Four Angry Men": "https://liquipedia.net/pubg/Four_Angry_Men/Results",
+      "NewHappy": "https://liquipedia.net/pubg/NewHappy",
+      "Petrichor Road": "https://liquipedia.net/pubg/Petrichor_Road/Results",
+      "Tianba": "https://liquipedia.net/pubg/Tianba/Results",
+      "China": "https://liquipedia.net/pubg/China"
+    };
+
+    const sampleRows = [
+      ["2017-11-19","Four Angry Men","2nd","S-Tier","PUBG Asia Invitational G-Star 2017 - Squad",36400],
+      ["2018-03-04","Four Angry Men","8th","A-Tier","StarSeries & i-League PUBG Season 1",2000],
+      ["2018-04-27","Four Angry Men","5th","A-Tier","PUBG Australia Invitational ZIMO 2018",11375],
+      ["2018-05-10","Four Angry Men","2nd","C-Tier","Zotac Cup PUBG Invitational 2018",2364],
+      ["2018-06-03","Four Angry Men","1st","A-Tier","PUBG China Pro Invitational 2018 TPP Championship",93704],
+      ["2018-07-26","Four Angry Men","13th","S-Tier","PUBG Global Invitational 2018 - TPP",5000],
+      ["2018-07-29","Four Angry Men","14th","S-Tier","PUBG Global Invitational 2018 - FPP",5000],
+      ["2018-09-02","Four Angry Men","6th","A-Tier","StarSeries & i-League PUBG Season 2",2000],
+      ["2018-09-16","Four Angry Men","5th","A-Tier","Douyu PUBG Golden Legends 2018",4369],
+      ["2018-10-14","Four Angry Men","15th","A-Tier","PGL-PUBG Fall Invitational 2018",1000],
+      ["2018-11-09","Four Angry Men","2nd","A-Tier","Jingdong Cup Season 2",21666],
+      ["2019-03-10","Four Angry Men","4th","A-Tier","Douyu PUBG Golden Legends 2019",2982],
+      ["2019-04-21","Four Angry Men","7th","S-Tier","FACEIT Global Summit: PUBG Classic",16000],
+      ["2019-06-09","Four Angry Men","6th","S-Tier","PUBG Champions League 2019 - Spring",2898],
+      ["2019-06-30","Four Angry Men","2nd","A-Tier","Douyu PUBG Golden Legends Season 7",11649],
+      ["2019-09-29","Four Angry Men","1st","S-Tier","PUBG Champions League 2019: Summer Playoffs",98094],
+      ["2019-11-24","Four Angry Men","3rd","S-Tier","PUBG Global Championship 2019",300000],
+      ["2019-08-11","China","8th","S-Tier","PUBG Nations Cup 2019",26000],
+      ["2020-12-13","Four Angry Men","3rd","A-Tier","AfreecaTV PUBG League: 2020 Winter Season",7000],
+      ["2020-12-25","Four Angry Men","2nd","A-Tier","TMC Global Invitational",38216],
+      ["2021-03-28","Four Angry Men","4th","S-Tier","PUBG Global Invitational.S 2021",455299],
+      ["2021-05-23","Four Angry Men","1st","A-Tier","PUBG Champions League 2021: Spring",163190],
+      ["2021-06-06","Four Angry Men","2nd","A-Tier","Bilibili PUBG Asia Cup",8209],
+      ["2021-06-27","Four Angry Men","8th","S-Tier","PUBG Continental Series 4: Asia",14000],
+      ["2021-07-12","Four Angry Men","1st","A-Tier","TMC Global Invitational 2021",12039],
+      ["2021-08-29","Four Angry Men","11th","A-Tier","PUBG Champions League 2021: Summer",28586],
+      ["2021-12-19","NewHappy","1st","S-Tier","PUBG Global Championship 2021",1378264],
+      ["2021-08-29","NewHappy","1st","A-Tier","PUBG Champions League 2021: Summer",113570],
+      ["2021-03-28","Petrichor Road","16th","S-Tier","PUBG Global Invitational.S 2021",66632],
+      ["2021-05-23","Petrichor Road","6th","A-Tier","PUBG Champions League 2021: Spring",31084],
+      ["2021-06-27","Petrichor Road","1st","S-Tier","PUBG Continental Series 4: Asia",53000],
+      ["2021-08-29","Petrichor Road","4th","A-Tier","PUBG Champions League 2021: Summer",42492],
+      ["2021-10-03","Petrichor Road","1st","S-Tier","PUBG Continental Series 5: Asia",54000],
+      ["2021-12-19","Petrichor Road","6th","S-Tier","PUBG Global Championship 2021",133242],
+      ["2021-09-12","China","2nd","B-Tier","Esports Championships East Asia 2021",4275],
+      ["2022-04-11","NewHappy","1st","A-Tier","PUBG Champions League 2022: Spring",204091],
+      ["2022-09-04","NewHappy","1st","A-Tier","PUBG Champions League 2022: Summer",159421],
+      ["2022-10-09","NewHappy","1st","S-Tier","PUBG Continental Series 7: Asia",80000],
+      ["2022-10-09","Petrichor Road","4th","S-Tier","PUBG Continental Series 7: Asia",16000],
+      ["2022-11-20","Petrichor Road","20th","S-Tier","PUBG Global Championship 2022",16772],
+      ["2022-06-12","China","3rd","C-Tier","PCL Scrim",4000],
+      ["2022-06-19","China","6th","S-Tier","PUBG Nations Cup 2022",34000],
+      ["2023-01-01","17 Gaming","2nd","A-Tier","Tianming Cup Season 10",17397],
+      ["2023-05-07","17 Gaming","1st","S-Tier","PUBG Global Series 1 2023",80000],
+      ["2023-12-03","17 Gaming","2nd","S-Tier","PUBG Global Championship 2023",329000],
+      ["2023-04-02","NewHappy","2nd","A-Tier","PUBG Champions League 2023: Spring",87349],
+      ["2023-12-03","NewHappy","5th","S-Tier","PUBG Global Championship 2023",94000],
+      ["2023-04-02","Petrichor Road","8th","A-Tier","PUBG Champions League 2023: Spring",14558],
+      ["2023-05-07","Petrichor Road","18th","S-Tier","PUBG Global Series 1 2023",10000],
+      ["2023-12-03","Petrichor Road","4th","S-Tier","PUBG Global Championship 2023",136300],
+      ["2023-10-29","Tianba","2nd","A-Tier","PUBG Champions League 2023: Summer",81990],
+      ["2023-12-03","Tianba","9th","S-Tier","PUBG Global Championship 2023",52875],
+      ["2023-09-17","China","12th","S-Tier","PUBG Nations Cup 2023",17750],
+      ["2024-05-26","17 Gaming","10th","S-Tier","PUBG Global Series 3 2024",8000],
+      ["2024-06-09","17 Gaming","24th","S-Tier","PUBG Global Series 4 2024",1000],
+      ["2024-05-11","NewHappy","1st","A-Tier","PUBG Champions League 2024: Spring",138376],
+      ["2024-10-13","NewHappy","2nd","A-Tier","PUBG Champions League 2024: Autumn",84911],
+      ["2024-05-11","Petrichor Road","4th","A-Tier","PUBG Champions League 2024: Spring",27675],
+      ["2024-05-26","Petrichor Road","5th","S-Tier","PUBG Global Series 3 2024",13000],
+      ["2024-06-09","Petrichor Road","9th","S-Tier","PUBG Global Series 4 2024",8500],
+      ["2024-08-25","Petrichor Road","2nd","S-Tier","Esports World Cup 2024",350000],
+      ["2024-12-22","Petrichor Road","13th","S-Tier","PUBG Global Championship 2024",39171],
+      ["2024-05-11","Tianba","3rd","A-Tier","PUBG Champions League 2024: Spring",41513],
+      ["2024-08-25","Tianba","12th","S-Tier","Esports World Cup 2024",27000],
+      ["2024-10-13","Tianba","1st","A-Tier","PUBG Champions League 2024: Autumn",141519],
+      ["2024-12-22","Tianba","23rd","S-Tier","PUBG Global Championship 2024",12998],
+      ["2024-09-08","China","7th","S-Tier","PUBG Nations Cup 2024",22872],
+      ["2025-04-13","NewHappy","3rd","A-Tier","PUBG Champions League 2025: Spring",35655],
+      ["2025-01-12","Petrichor Road","1st","B-Tier","2025 PUBG DAIZHU CUP Season 1",6819],
+      ["2025-02-23","Petrichor Road","1st","B-Tier","2025 PUBG DAIZHU CUP Season 2",6896],
+      ["2025-04-13","Petrichor Road","1st","A-Tier","PUBG Champions League 2025: Spring",159076],
+      ["2025-05-04","Petrichor Road","16th","S-Tier","PUBG Global Series 7 2025",5000],
+      ["2025-05-18","Petrichor Road","20th","S-Tier","PUBG Global Series 8 2025",3000],
+      ["2025-08-16","Petrichor Road","16th","S-Tier","Esports World Cup 2025",32000],
+      ["2025-09-28","Petrichor Road","2nd","A-Tier","PUBG Champions League 2025: Autumn",71772],
+      ["2025-07-27","China","2nd","S-Tier","PUBG Nations Cup 2025",121142]
+    ].map(r => ({date:r[0], team:r[1], place:r[2], tier:r[3], event:r[4], prize:r[5], source:sources[r[1]]}));
+
+    const rows = window.dashboardData.records;
+    const teamTotals = window.dashboardData.teamTotals;
+    const annualOverrides = window.dashboardData.annualOverrides || {};
+    const fullResultTeams = new Set(window.dashboardData.coverage.filter(d => d.status === "ok").map(d => d.team));
+    const overviewTeams = new Set(window.dashboardData.coverage.filter(d => d.status === "overview").map(d => d.team));
+    const syncedTeams = new Set([...fullResultTeams, ...overviewTeams]);
+    const annualTeams = new Set([...syncedTeams, ...Object.keys(annualOverrides)]);
+
+    const directory = ["1246","17 Gaming","All Gamers","Anyone's Legend","Black Ananas","Change The Game","China","Crystal Luster","DD Team","EDward Gaming","Four Angry Men","Games Forever Young","Infantry","JD Gaming","KaiXin Esports","LGD Gaming","LinGan e-Sports","Luminous Stars","Multi Circle Gaming","NewHappy","Oh My God","Petrichor Road","QM Gaming","Royal Never Give Up","Still Moving Under Gunfire","Super Survivor Squad","TakeMeAway Gaming","Tianba","Triumphant Song Gaming","TYLOO","VC Gaming","ViCi Gaming","Victory Five","Weibo Gaming"];
+
+    const exchangeRates = {
+      "2017": 6.7569, "2018": 6.6090, "2019": 6.9081, "2020": 6.9042,
+      "2021": 6.4508, "2022": 6.7290, "2023": 7.0809, "2024": 7.1217,
+      "2025": 7.1875, "2026": 6.8803
+    };
+    let currencyMode = "USD";
+    const usdMoney = n => "$" + Math.round(n).toLocaleString("en-US");
+    const cnyMoney = n => "¥" + Math.round(n).toLocaleString("zh-CN");
+    const toCny = (usd, year="2025") => usd * (exchangeRates[String(year)] || exchangeRates["2025"]);
+    const money = (usd, year="2025") => {
+      const cny = toCny(usd, year);
+      if (currencyMode === "CNY") return cnyMoney(cny);
+      if (currencyMode === "DUAL") return `<span class="dual-money">${usdMoney(usd)}<small>${cnyMoney(cny)}</small></span>`;
+      return usdMoney(usd);
+    };
+    const compactValue = (n, symbol) => n >= 1e8 ? symbol+(n/1e8).toFixed(2)+"亿" : n >= 1e6 ? symbol+(n/1e6).toFixed(2)+"M" : n >= 1e3 ? symbol+Math.round(n/1e3)+"K" : symbol+Math.round(n);
+    const compactMoney = (usd, year="2025") => currencyMode === "CNY"
+      ? compactValue(toCny(usd,year),"¥")
+      : compactValue(usd,"$");
+    const teams = Object.keys(teamTotals).sort();
+    const years = [...new Set(rows.map(d => d.date.slice(0,4)))].sort((a,b)=>b-a);
+    const allYears = [...years].sort();
+    const tiers = [...new Set(rows.map(d => d.tier))].sort();
+    const palette = ["#c6ff3d","#61e5ff","#ff9254","#ff5f69","#b78cff","#44d7a8"];
+    const annualByTeam = {};
+    rows.forEach(d => {
+      const year = d.date.slice(0,4);
+      annualByTeam[d.team] ||= {};
+      annualByTeam[d.team][year] = (annualByTeam[d.team][year] || 0) + d.prize;
+    });
+    Object.entries(annualOverrides).forEach(([team, data]) => annualByTeam[team] = {...data.years});
+    const detailTotal = team => Object.values(annualByTeam[team] || {}).reduce((a,b)=>a+b,0);
+    const currentTotal = team => annualTeams.has(team) ? detailTotal(team) : teamTotals[team];
+    const annualCnyTotal = team => annualTeams.has(team)
+      ? Object.entries(annualByTeam[team]).reduce((sum,[year,value])=>sum+toCny(value,year),0)
+      : toCny(teamTotals[team],"2025");
+    const aggregateMoney = (usd,cny) => {
+      if (currencyMode === "CNY") return cnyMoney(cny);
+      if (currencyMode === "DUAL") return `<span class="dual-money">${usdMoney(usd)}<small>${cnyMoney(cny)}</small></span>`;
+      return usdMoney(usd);
+    };
+    const metricValue = (usd, year="2025") => currencyMode === "CNY" ? toCny(usd,year) : usd;
+    const metricTotal = team => currencyMode === "CNY" ? annualCnyTotal(team) : currentTotal(team);
+    const chartCompact = value => compactValue(value, currencyMode === "CNY" ? "¥" : "$");
+    const defaultCompared = [...annualTeams].sort((a,b)=>teamTotals[b]-teamTotals[a]).slice(0,4);
+    const comparedTeams = new Set(defaultCompared);
+
+    document.querySelector("#eventCount").textContent = rows.length;
+    document.querySelector("#winCount").textContent = rows.filter(d=>d.place==="1st").length;
+    document.querySelector("#teamCount").textContent = teams.length;
+
+    const fillSelect = (id, values) => {
+      const el = document.querySelector(id);
+      values.forEach(v => el.insertAdjacentHTML("beforeend", `<option value="${v}">${v}</option>`));
+    };
+    fillSelect("#teamFilter", [...syncedTeams].sort()); fillSelect("#yearFilter", years); fillSelect("#tierFilter", tiers);
+
+    function renderBars() {
+      const sums = teams.map(team => ({team, value: metricTotal(team)})).sort((a,b)=>b.value-a.value);
+      const max = sums[0].value;
+      document.querySelector("#teamBars").innerHTML = sums.map(d => `
+        <div class="bar-row">
+          <span>${d.team}</span>
+          <div class="bar-track"><div class="bar-fill" style="width:${d.value/max*100}%"></div></div>
+          <span class="bar-value">${currencyMode==="DUAL" ? aggregateMoney(currentTotal(d.team),annualCnyTotal(d.team)) : chartCompact(d.value)}</span>
+        </div>`).join("");
+    }
+
+    function renderTrend() {
+      const data = [...new Set(rows.map(d=>+d.date.slice(0,4)))].sort().map(year => ({
+        year, usd: rows.filter(d=>+d.date.slice(0,4)===year).reduce((s,d)=>s+d.prize,0)
+      }));
+      data.forEach(d => d.value = metricValue(d.usd,d.year));
+      const svg = document.querySelector("#trend"), W=760, H=310, p={l:56,r:20,t:18,b:42};
+      const max = Math.max(...data.map(d=>d.value))*1.08;
+      const x = i => p.l + i*(W-p.l-p.r)/(data.length-1);
+      const y = v => H-p.b-v/max*(H-p.t-p.b);
+      const points = data.map((d,i)=>`${x(i)},${y(d.value)}`).join(" ");
+      let html = `<defs><linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c6ff3d" stop-opacity=".28"/><stop offset="100%" stop-color="#c6ff3d" stop-opacity="0"/></linearGradient></defs>`;
+      [0,.25,.5,.75,1].forEach(t => {
+        const yy=y(max*t); html += `<line class="gridline" x1="${p.l}" x2="${W-p.r}" y1="${yy}" y2="${yy}"/><text class="axis-label" x="${p.l-8}" y="${yy+4}" text-anchor="end">${chartCompact(max*t)}</text>`;
+      });
+      html += `<polygon class="area" points="${p.l},${H-p.b} ${points} ${W-p.r},${H-p.b}"/><polyline class="line" points="${points}"/>`;
+      data.forEach((d,i)=> html += `<circle class="dot" cx="${x(i)}" cy="${y(d.value)}" r="4"/><text class="axis-label" x="${x(i)}" y="${H-16}" text-anchor="middle">${d.year}</text>`);
+      svg.innerHTML = html;
+    }
+
+    function renderCompareControls() {
+      const ordered = [...annualTeams].sort((a,b)=>teamTotals[b]-teamTotals[a]);
+      document.querySelector("#compareControls").innerHTML = ordered.map(team => {
+        const active = comparedTeams.has(team);
+        const index = [...comparedTeams].indexOf(team);
+        const color = active ? palette[index] : "#56616e";
+        const disabled = !active && comparedTeams.size >= 6;
+        return `<button class="compare-chip ${active?"active":""}" style="--chip-color:${color}" data-team="${team}" ${disabled?"disabled":""}>${team}</button>`;
+      }).join("");
+      document.querySelectorAll(".compare-chip").forEach(button => button.addEventListener("click", () => {
+        const team = button.dataset.team;
+        if (comparedTeams.has(team)) {
+          if (comparedTeams.size > 1) comparedTeams.delete(team);
+        } else if (comparedTeams.size < 6) {
+          comparedTeams.add(team);
+        }
+        renderComparison();
+      }));
+    }
+
+    function renderComparison() {
+      renderCompareControls();
+      const selected = [...comparedTeams];
+      const series = selected.map((team,index) => ({
+        team, color: palette[index], values: allYears.map(year => metricValue(annualByTeam[team]?.[year] || 0,year))
+      }));
+      const combinedByYear = allYears.map((year,i) => series.reduce((sum,s)=>sum+s.values[i],0));
+      const peakValue = Math.max(...combinedByYear);
+      const peakYear = allYears[combinedByYear.indexOf(peakValue)];
+      document.querySelector("#compareSummary").innerHTML = [
+        ["已选战队", selected.length + " 支"],
+        ["当前统计总计", currencyMode==="CNY" ? cnyMoney(selected.reduce((s,t)=>s+annualCnyTotal(t),0)) : aggregateMoney(selected.reduce((s,t)=>s+currentTotal(t),0),selected.reduce((s,t)=>s+annualCnyTotal(t),0))],
+        ["年度明细合计", currencyMode==="CNY" ? cnyMoney(selected.reduce((s,t)=>s+annualCnyTotal(t),0)) : aggregateMoney(selected.reduce((s,t)=>s+detailTotal(t),0),selected.reduce((s,t)=>s+annualCnyTotal(t),0))],
+        ["合计峰值年份", `${peakYear} / ${chartCompact(peakValue)}`]
+      ].map(d=>`<div class="summary-cell"><span>${d[0]}</span><b>${d[1]}</b></div>`).join("");
+
+      const svg = document.querySelector("#compareChart"), W=1180, H=360, p={l:72,r:24,t:20,b:48};
+      const max = Math.max(1,...series.flatMap(s=>s.values))*1.08;
+      const x = i => p.l + i*(W-p.l-p.r)/Math.max(1,allYears.length-1);
+      const y = v => H-p.b-v/max*(H-p.t-p.b);
+      let html = "";
+      [0,.25,.5,.75,1].forEach(t => {
+        const yy=y(max*t);
+        html += `<line class="gridline" x1="${p.l}" x2="${W-p.r}" y1="${yy}" y2="${yy}"/><text class="axis-label" x="${p.l-10}" y="${yy+4}" text-anchor="end">${chartCompact(max*t)}</text>`;
+      });
+      allYears.forEach((year,i) => html += `<text class="axis-label" x="${x(i)}" y="${H-17}" text-anchor="middle">${year}</text>`);
+      series.forEach(s => {
+        const points = s.values.map((value,i)=>`${x(i)},${y(value)}`).join(" ");
+        html += `<polyline points="${points}" fill="none" stroke="${s.color}" stroke-width="3"/>`;
+        s.values.forEach((value,i) => {
+          const usd = annualByTeam[s.team]?.[allYears[i]] || 0;
+          html += `<circle cx="${x(i)}" cy="${y(value)}" r="3.5" fill="#080b10" stroke="${s.color}" stroke-width="2"><title>${s.team} ${allYears[i]}: ${usdMoney(usd)} / ${cnyMoney(toCny(usd,allYears[i]))}</title></circle>`;
+        });
+      });
+      svg.innerHTML = html;
+      document.querySelector("#compareLegend").innerHTML = series.map(s=>`<span><i style="background:${s.color}"></i>${s.team} · 当前总计 ${aggregateMoney(currentTotal(s.team),annualCnyTotal(s.team))}</span>`).join("");
+    }
+
+    function renderMatrix() {
+      const ordered = [...teams].sort((a,b)=>metricTotal(b)-metricTotal(a));
+      document.querySelector("#matrixHead").innerHTML = `<tr><th>战队</th>${allYears.map(y=>`<th>${y}</th>`).join("")}<th title="Results / Overview 中赛事奖金逐条求和">当前统计总计</th><th title="较早的 Organization Money Ranking 索引值">排名页快照</th><th title="当前统计总计减去排名页快照；正数通常代表新增赛事，负数通常代表排名页含额外历史项目">差额 ⓘ</th></tr>`;
+      document.querySelector("#matrixBody").innerHTML = ordered.map(team => {
+        const hasDetail = fullResultTeams.has(team);
+        const isOverview = overviewTeams.has(team);
+        const hasAnnual = annualTeams.has(team);
+        const isReconciled = annualOverrides[team]?.status === "indexed-reconciled";
+        const yearly = annualByTeam[team] || {};
+        const peak = hasAnnual ? Math.max(...allYears.map(y=>yearly[y]||0)) : -1;
+        const cells = allYears.map(year => {
+          if (!hasAnnual) return `<td class="missing">待同步</td>`;
+          const value = yearly[year] || 0;
+          return `<td class="${value>0&&value===peak?"peak":""}">${value ? money(value,year) : "—"}</td>`;
+        }).join("");
+        const label = hasDetail ? "Results完整" : isOverview ? "主页成绩" : isReconciled ? "索引校验" : "仅总计";
+        const deltaUsd = hasAnnual ? detailTotal(team) - teamTotals[team] : null;
+        const deltaCny = hasAnnual ? annualCnyTotal(team) - toCny(teamTotals[team],"2025") : null;
+        const deltaValue = currencyMode === "CNY" ? deltaCny : deltaUsd;
+        const deltaText = deltaValue === null ? "—" : `${deltaValue>0?"+":""}${currencyMode==="CNY"?cnyMoney(deltaValue):currencyMode==="DUAL"?aggregateMoney(deltaUsd,deltaCny):usdMoney(deltaValue)}`;
+        return `<tr><td><strong>${team}</strong><span class="coverage-badge ${hasAnnual?"ok":""}">${label}</span></td>${cells}<td class="detail-total">${aggregateMoney(currentTotal(team),annualCnyTotal(team))}</td><td class="official">${money(teamTotals[team],"2025")}</td><td class="${deltaValue===0?"":deltaValue>0?"money":"missing"}">${deltaText}</td></tr>`;
+      }).join("");
+    }
+
+    function renderTable() {
+      const team = document.querySelector("#teamFilter").value;
+      const year = document.querySelector("#yearFilter").value;
+      const tier = document.querySelector("#tierFilter").value;
+      const q = document.querySelector("#searchInput").value.trim().toLowerCase();
+      const normalize = value => value.toLowerCase().replace(/[\s'’_-]+/g,"");
+      const normalizedQuery = normalize(q);
+      const filtered = rows.filter(d => {
+        const matchesQuery = !q || normalize(d.team).includes(normalizedQuery) || normalize(d.event).includes(normalizedQuery);
+        return (!team||d.team===team) && (!year||d.date.startsWith(year)) && (!tier||d.tier===tier) && matchesQuery;
+      }).sort((a,b)=>b.date.localeCompare(a.date));
+      const filteredPrize = filtered.reduce((sum,d)=>sum+d.prize,0);
+      const filteredCny = filtered.reduce((sum,d)=>sum+toCny(d.prize,d.date.slice(0,4)),0);
+      const paidEvents = filtered.filter(d=>d.prize>0).length;
+      const wins = filtered.filter(d=>d.place==="1st").length;
+      const scope = [team, year, tier, q&&`“${q}”`].filter(Boolean).join(" · ") || "全部已同步明细";
+      document.querySelector("#filterSummary").innerHTML = [
+        ["筛选奖金合计", aggregateMoney(filteredPrize,filteredCny)],
+        ["赛事记录", filtered.length + " 条"],
+        ["有奖金赛事", paidEvents + " 条"],
+        ["冠军次数", wins + " 次"]
+      ].map(d=>`<div class="summary-cell"><span>${d[0]}</span><b>${d[1]}</b></div>`).join("");
+      document.querySelector("#resultCount").textContent = `${filtered.length} 条记录`;
+      document.querySelector("#resultCount").title = scope;
+      document.querySelector("#resultsBody").innerHTML = filtered.length ? filtered.map(d => `
+        <tr>
+          <td>${d.date}</td><td><strong>${d.team}</strong></td>
+          <td class="place ${d.place==="1st"?"win":""}">${d.place}</td>
+          <td><span class="tier">${d.tier}</span></td><td>${d.event}</td>
+          <td class="money">${d.prize ? money(d.prize,d.date.slice(0,4)) : "—"}</td>
+          <td><a href="${d.source}" target="_blank" rel="noreferrer">Liquipedia ↗</a></td>
+        </tr>`).join("") : `<tr><td colspan="7" class="empty">没有符合条件的记录</td></tr>`;
+    }
+
+    function renderCurrencyView() {
+      const totalUsd = teams.reduce((sum,team)=>sum+currentTotal(team),0);
+      const totalCny = teams.reduce((sum,team)=>sum+annualCnyTotal(team),0);
+      document.querySelector("#totalPrize").innerHTML = aggregateMoney(totalUsd,totalCny);
+      document.querySelectorAll(".currency-btn").forEach(button => button.classList.toggle("active",button.dataset.currency===currencyMode));
+      renderBars();
+      renderTrend();
+      renderComparison();
+      renderMatrix();
+      renderTable();
+    }
+
+    document.querySelector("#directory").innerHTML = directory.map(name => `<span class="chip ${annualTeams.has(name)?"covered":""}">${name}</span>`).join("");
+    ["#teamFilter","#yearFilter","#tierFilter"].forEach(id=>document.querySelector(id).addEventListener("change",renderTable));
+    document.querySelector("#searchInput").addEventListener("input",renderTable);
+    document.querySelectorAll(".currency-btn").forEach(button => button.addEventListener("click", () => {
+      currencyMode = button.dataset.currency;
+      renderCurrencyView();
+    }));
+    renderCurrencyView();
+  </script>
+</body>
+</html>
