@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08",
+  "generatedAt": "2026-06-15",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,50 @@
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-06-14",
+      "team": "Weibo Gaming",
+      "place": "20th",
+      "tier": "C-Tier",
+      "event": "Tianming Cup 2026 Season 9",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup/2026/Season_9",
+      "source": "https://liquipedia.net/pubg/Weibo_Gaming/Results"
+    },
+    {
+      "date": "2026-06-14",
+      "team": "TYLOO",
+      "place": "5th",
+      "tier": "C-Tier",
+      "event": "Tianming Cup 2026 Season 9",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup/2026/Season_9",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2026-06-14",
+      "team": "NewHappy",
+      "place": "8th",
+      "tier": "C-Tier",
+      "event": "Tianming Cup 2026 Season 9",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup/2026/Season_9",
+      "source": "https://liquipedia.net/pubg/NewHappy/Results"
+    },
+    {
+      "date": "2026-06-14",
+      "team": "China",
+      "place": "1st",
+      "tier": "C-Tier",
+      "event": "Tianming Cup 2026 Season 9",
+      "prize": 1477.0,
+      "prizeRaw": "$1,477",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup/2026/Season_9",
+      "source": "https://liquipedia.net/pubg/China/Results"
+    },
     {
       "date": "2026-06-07",
       "team": "Petrichor Road",
@@ -3758,6 +3802,39 @@
       "source": "https://liquipedia.net/pubg/17_Gaming/Results"
     },
     {
+      "date": "2023-12-31",
+      "team": "Tianba",
+      "place": "2nd",
+      "tier": "A-Tier",
+      "event": "Tianming Cup Season 11",
+      "prize": 7064.0,
+      "prizeRaw": "$7,064",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup/Season_11",
+      "source": "https://liquipedia.net/pubg/Tianba/Results"
+    },
+    {
+      "date": "2023-12-31",
+      "team": "Four Angry Men",
+      "place": "1st",
+      "tier": "A-Tier",
+      "event": "Tianming Cup Season 11",
+      "prize": 14127.0,
+      "prizeRaw": "$14,127",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup/Season_11",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2023-12-31",
+      "team": "DD Team",
+      "place": "5th",
+      "tier": "A-Tier",
+      "event": "Tianming Cup Season 11",
+      "prize": 2119.0,
+      "prizeRaw": "$2,119",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup/Season_11",
+      "source": "https://liquipedia.net/pubg/DD_Team/Results"
+    },
+    {
       "date": "2023-12-03",
       "team": "Tianba",
       "place": "9th",
@@ -4438,17 +4515,6 @@
       "prizeRaw": "$69",
       "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp/2023/Season_5/Phase_1",
       "source": "https://liquipedia.net/pubg/DD_Team/Results"
-    },
-    {
-      "date": "2023-08-26",
-      "team": "China",
-      "place": "5th",
-      "tier": "D-Tier",
-      "event": "BOSS Training Camp Season 5 Phase 1",
-      "prize": 0,
-      "prizeRaw": "-",
-      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp/2023/Season_5/Phase_1",
-      "source": "https://liquipedia.net/pubg/China/Results"
     },
     {
       "date": "2023-08-26",
@@ -9787,6 +9853,17 @@
     },
     {
       "date": "2020-09-20",
+      "team": "KaiXin Esports",
+      "place": "12th",
+      "tier": "A-Tier",
+      "event": "Douyu PUBG Golden Legends Season 10",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Douyu/PUBG_Golden_Legends/Season_10",
+      "source": "https://liquipedia.net/pubg/KaiXin_Esports/Results"
+    },
+    {
+      "date": "2020-09-20",
       "team": "Infantry",
       "place": "1st",
       "tier": "A-Tier",
@@ -14011,17 +14088,6 @@
     },
     {
       "date": "2018-09-22",
-      "team": "Super Survivor Squad",
-      "place": "17th - 32nd",
-      "tier": "Qualifier",
-      "event": "Bausch+Lomb ImbaTV Superleague - Qualifier",
-      "prize": 0,
-      "prizeRaw": "-",
-      "eventUrl": "https://liquipedia.net/pubg/ImbaTV/Superleague/Qualifier",
-      "source": "https://liquipedia.net/pubg/Super_Survivor_Squad/Results"
-    },
-    {
-      "date": "2018-09-22",
       "team": "Royal Never Give Up",
       "place": "8th",
       "tier": "Qualifier",
@@ -15166,17 +15232,6 @@
     },
     {
       "date": "2018-02-10",
-      "team": "Super Survivor Squad",
-      "place": "2nd",
-      "tier": "A-Tier",
-      "event": "PandaTV PUBG League Season 1",
-      "prize": 12660.0,
-      "prizeRaw": "$12,660",
-      "eventUrl": "https://liquipedia.net/pubg/PandaTV/PUBG_League/Season/1",
-      "source": "https://liquipedia.net/pubg/Super_Survivor_Squad/Results"
-    },
-    {
-      "date": "2018-02-10",
       "team": "Royal Never Give Up",
       "place": "11th",
       "tier": "A-Tier",
@@ -15415,7 +15470,7 @@
     {
       "team": "DD Team",
       "status": "ok",
-      "records": 44,
+      "records": 45,
       "page": "DD Team"
     },
     {
@@ -15427,7 +15482,7 @@
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 141,
+      "records": 142,
       "page": "Four Angry Men"
     },
     {
@@ -15451,7 +15506,7 @@
     {
       "team": "KaiXin Esports",
       "status": "ok",
-      "records": 15,
+      "records": 16,
       "page": "KaiXin Esports"
     },
     {
@@ -15481,7 +15536,7 @@
     {
       "team": "NewHappy",
       "status": "ok",
-      "records": 96,
+      "records": 97,
       "page": "NewHappy"
     },
     {
@@ -15517,7 +15572,7 @@
     {
       "team": "Super Survivor Squad",
       "status": "ok",
-      "records": 22,
+      "records": 20,
       "page": "Super Survivor Squad"
     },
     {
@@ -15529,7 +15584,7 @@
     {
       "team": "Tianba",
       "status": "ok",
-      "records": 95,
+      "records": 96,
       "page": "Tianba"
     },
     {
@@ -15541,7 +15596,7 @@
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 80,
+      "records": 81,
       "page": "TYLOO"
     },
     {
@@ -15565,7 +15620,7 @@
     {
       "team": "Weibo Gaming",
       "status": "ok",
-      "records": 45,
+      "records": 46,
       "page": "Weibo Gaming"
     }
   ]
