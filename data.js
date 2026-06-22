@@ -1,5 +1,5 @@
 window.dashboardData = {
-  "generatedAt": "2026-06-15",
+  "generatedAt": "2026-06-22",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -5526,6 +5526,105 @@ window.dashboardData = {
       "prize": 288.0,
       "prizeRaw": "$288",
       "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp/2023",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "Tianba",
+      "place": "7th",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 658.0,
+      "prizeRaw": "$658",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/Tianba/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "TakeMeAway Gaming",
+      "place": "26th",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/TakeMeAway_Gaming/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "TYLOO",
+      "place": "15th",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 219.0,
+      "prizeRaw": "$219",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "Petrichor Road",
+      "place": "4th",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 731.0,
+      "prizeRaw": "$731",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "NewHappy",
+      "place": "1st",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 5849.0,
+      "prizeRaw": "$5,849",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/NewHappy/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "Games Forever Young",
+      "place": "24th",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/Games_Forever_Young/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "DD Team",
+      "place": "10th",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 512.0,
+      "prizeRaw": "$512",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/DD_Team/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "Change The Game",
+      "place": "5th",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
+      "source": "https://liquipedia.net/pubg/Change_The_Game/Results"
+    },
+    {
+      "date": "2023-01-08",
+      "team": "17 Gaming",
+      "place": "2nd",
+      "tier": "B-Tier",
+      "event": "BOSS Training Camp",
+      "prize": 3144.0,
+      "prizeRaw": "$3,144",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp",
       "source": "https://liquipedia.net/pubg/17_Gaming/Results"
     },
     {
@@ -15428,7 +15527,7 @@ window.dashboardData = {
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 110,
+      "records": 111,
       "page": "17 Gaming"
     },
     {
@@ -15452,7 +15551,7 @@ window.dashboardData = {
     {
       "team": "Change The Game",
       "status": "ok",
-      "records": 85,
+      "records": 86,
       "page": "Change The Game"
     },
     {
@@ -15470,7 +15569,7 @@ window.dashboardData = {
     {
       "team": "DD Team",
       "status": "ok",
-      "records": 45,
+      "records": 46,
       "page": "DD Team"
     },
     {
@@ -15488,7 +15587,7 @@ window.dashboardData = {
     {
       "team": "Games Forever Young",
       "status": "ok",
-      "records": 32,
+      "records": 33,
       "page": "Games Forever Young"
     },
     {
@@ -15536,7 +15635,7 @@ window.dashboardData = {
     {
       "team": "NewHappy",
       "status": "ok",
-      "records": 97,
+      "records": 98,
       "page": "NewHappy"
     },
     {
@@ -15548,7 +15647,7 @@ window.dashboardData = {
     {
       "team": "Petrichor Road",
       "status": "ok",
-      "records": 105,
+      "records": 106,
       "page": "Petrichor Road"
     },
     {
@@ -15578,13 +15677,13 @@ window.dashboardData = {
     {
       "team": "TakeMeAway Gaming",
       "status": "ok",
-      "records": 18,
+      "records": 19,
       "page": "TakeMeAway Gaming"
     },
     {
       "team": "Tianba",
       "status": "ok",
-      "records": 96,
+      "records": 97,
       "page": "Tianba"
     },
     {
@@ -15596,7 +15695,7 @@ window.dashboardData = {
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 81,
+      "records": 82,
       "page": "TYLOO"
     },
     {
