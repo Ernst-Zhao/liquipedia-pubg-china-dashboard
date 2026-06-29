@@ -1,5 +1,5 @@
 window.dashboardData = {
-  "generatedAt": "2026-06-22",
+  "generatedAt": "2026-06-29",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,17 @@ window.dashboardData = {
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-06-28",
+      "team": "China",
+      "place": "4th",
+      "tier": "S-Tier",
+      "event": "PUBG Nations Cup 2026",
+      "prize": 30000.0,
+      "prizeRaw": "$30,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Nations_Cup/2026",
+      "source": "https://liquipedia.net/pubg/China/Results"
+    },
     {
       "date": "2026-06-14",
       "team": "Weibo Gaming",
@@ -4287,17 +4298,6 @@ window.dashboardData = {
     },
     {
       "date": "2023-09-08",
-      "team": "China",
-      "place": "5th",
-      "tier": "B-Tier",
-      "event": "Tianming Cup Expedition Season 3",
-      "prize": 0,
-      "prizeRaw": "-",
-      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup_Expedition/Season_3",
-      "source": "https://liquipedia.net/pubg/China/Results"
-    },
-    {
-      "date": "2023-09-08",
       "team": "Change The Game",
       "place": "8th",
       "tier": "B-Tier",
@@ -6443,6 +6443,28 @@ window.dashboardData = {
     },
     {
       "date": "2022-07-17",
+      "team": "TakeMeAway Gaming",
+      "place": "6th",
+      "tier": "C-Tier",
+      "event": "Supper Cup Week 4",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Supper_Cup/2022/Week_4",
+      "source": "https://liquipedia.net/pubg/TakeMeAway_Gaming/Results"
+    },
+    {
+      "date": "2022-07-17",
+      "team": "TYLOO",
+      "place": "8th",
+      "tier": "C-Tier",
+      "event": "Supper Cup Week 4",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Supper_Cup/2022/Week_4",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2022-07-17",
       "team": "Petrichor Road",
       "place": "12th",
       "tier": "B-Tier",
@@ -6462,6 +6484,61 @@ window.dashboardData = {
       "prizeRaw": "-",
       "eventUrl": "https://liquipedia.net/pubg/2022_Incheon_Challenge_Cup",
       "source": "https://liquipedia.net/pubg/NewHappy/Results"
+    },
+    {
+      "date": "2022-07-17",
+      "team": "Infantry",
+      "place": "2nd",
+      "tier": "C-Tier",
+      "event": "Supper Cup Week 4",
+      "prize": 296.0,
+      "prizeRaw": "$296",
+      "eventUrl": "https://liquipedia.net/pubg/Supper_Cup/2022/Week_4",
+      "source": "https://liquipedia.net/pubg/Infantry/Results"
+    },
+    {
+      "date": "2022-07-17",
+      "team": "Games Forever Young",
+      "place": "4th",
+      "tier": "C-Tier",
+      "event": "Supper Cup Week 4",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Supper_Cup/2022/Week_4",
+      "source": "https://liquipedia.net/pubg/Games_Forever_Young/Results"
+    },
+    {
+      "date": "2022-07-17",
+      "team": "Four Angry Men",
+      "place": "19th",
+      "tier": "C-Tier",
+      "event": "Supper Cup Week 4",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Supper_Cup/2022/Week_4",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2022-07-17",
+      "team": "DD Team",
+      "place": "10th",
+      "tier": "C-Tier",
+      "event": "Supper Cup Week 4",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Supper_Cup/2022/Week_4",
+      "source": "https://liquipedia.net/pubg/DD_Team/Results"
+    },
+    {
+      "date": "2022-07-17",
+      "team": "Change The Game",
+      "place": "1st",
+      "tier": "C-Tier",
+      "event": "Supper Cup Week 4",
+      "prize": 592.0,
+      "prizeRaw": "$592",
+      "eventUrl": "https://liquipedia.net/pubg/Supper_Cup/2022/Week_4",
+      "source": "https://liquipedia.net/pubg/Change_The_Game/Results"
     },
     {
       "date": "2022-07-17",
@@ -8389,6 +8466,50 @@ window.dashboardData = {
       "source": "https://liquipedia.net/pubg/Infantry/Results"
     },
     {
+      "date": "2021-06-23",
+      "team": "Weibo Gaming",
+      "place": "2nd",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 3",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_3",
+      "source": "https://liquipedia.net/pubg/Weibo_Gaming/Results"
+    },
+    {
+      "date": "2021-06-23",
+      "team": "QM Gaming",
+      "place": "5th",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 3",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_3",
+      "source": "https://liquipedia.net/pubg/QM_Gaming/Results"
+    },
+    {
+      "date": "2021-06-23",
+      "team": "LinGan e-Sports",
+      "place": "7th",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 3",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_3",
+      "source": "https://liquipedia.net/pubg/LinGan_e-Sports/Results"
+    },
+    {
+      "date": "2021-06-23",
+      "team": "Change The Game",
+      "place": "3rd",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 3",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_3",
+      "source": "https://liquipedia.net/pubg/Change_The_Game/Results"
+    },
+    {
       "date": "2021-06-18",
       "team": "Weibo Gaming",
       "place": "2nd",
@@ -8423,6 +8544,28 @@ window.dashboardData = {
     },
     {
       "date": "2021-06-16",
+      "team": "Weibo Gaming",
+      "place": "5th",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 2",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_2",
+      "source": "https://liquipedia.net/pubg/Weibo_Gaming/Results"
+    },
+    {
+      "date": "2021-06-16",
+      "team": "Tianba",
+      "place": "3rd",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 2",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_2",
+      "source": "https://liquipedia.net/pubg/Tianba/Results"
+    },
+    {
+      "date": "2021-06-16",
       "team": "TYLOO",
       "place": "1st",
       "tier": "C-Tier",
@@ -8431,6 +8574,28 @@ window.dashboardData = {
       "prizeRaw": "$2,342",
       "eventUrl": "https://liquipedia.net/pubg/PUBG_SHOW/2021/Phase_1",
       "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2021-06-16",
+      "team": "NewHappy",
+      "place": "2nd",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 2",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_2",
+      "source": "https://liquipedia.net/pubg/NewHappy/Results"
+    },
+    {
+      "date": "2021-06-16",
+      "team": "Infantry",
+      "place": "1st",
+      "tier": "C-Tier",
+      "event": "PGL SUMMER CUP Week 2",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PGL_SUMMER_CUP/Week_2",
+      "source": "https://liquipedia.net/pubg/Infantry/Results"
     },
     {
       "date": "2021-06-16",
@@ -14187,6 +14352,17 @@ window.dashboardData = {
     },
     {
       "date": "2018-09-22",
+      "team": "Super Survivor Squad",
+      "place": "17th - 32nd",
+      "tier": "Qualifier",
+      "event": "Bausch+Lomb ImbaTV Superleague - Qualifier",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/ImbaTV/Superleague/Qualifier",
+      "source": "https://liquipedia.net/pubg/Super_Survivor_Squad/Results"
+    },
+    {
+      "date": "2018-09-22",
       "team": "Royal Never Give Up",
       "place": "8th",
       "tier": "Qualifier",
@@ -15331,6 +15507,17 @@ window.dashboardData = {
     },
     {
       "date": "2018-02-10",
+      "team": "Super Survivor Squad",
+      "place": "2nd",
+      "tier": "A-Tier",
+      "event": "PandaTV PUBG League Season 1",
+      "prize": 12660.0,
+      "prizeRaw": "$12,660",
+      "eventUrl": "https://liquipedia.net/pubg/PandaTV/PUBG_League/Season/1",
+      "source": "https://liquipedia.net/pubg/Super_Survivor_Squad/Results"
+    },
+    {
+      "date": "2018-02-10",
       "team": "Royal Never Give Up",
       "place": "11th",
       "tier": "A-Tier",
@@ -15551,7 +15738,7 @@ window.dashboardData = {
     {
       "team": "Change The Game",
       "status": "ok",
-      "records": 86,
+      "records": 88,
       "page": "Change The Game"
     },
     {
@@ -15569,7 +15756,7 @@ window.dashboardData = {
     {
       "team": "DD Team",
       "status": "ok",
-      "records": 46,
+      "records": 47,
       "page": "DD Team"
     },
     {
@@ -15581,19 +15768,19 @@ window.dashboardData = {
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 142,
+      "records": 143,
       "page": "Four Angry Men"
     },
     {
       "team": "Games Forever Young",
       "status": "ok",
-      "records": 33,
+      "records": 34,
       "page": "Games Forever Young"
     },
     {
       "team": "Infantry",
       "status": "ok",
-      "records": 58,
+      "records": 60,
       "page": "Infantry"
     },
     {
@@ -15617,7 +15804,7 @@ window.dashboardData = {
     {
       "team": "LinGan e-Sports",
       "status": "ok",
-      "records": 30,
+      "records": 31,
       "page": "LinGan e-Sports"
     },
     {
@@ -15635,7 +15822,7 @@ window.dashboardData = {
     {
       "team": "NewHappy",
       "status": "ok",
-      "records": 98,
+      "records": 99,
       "page": "NewHappy"
     },
     {
@@ -15653,7 +15840,7 @@ window.dashboardData = {
     {
       "team": "QM Gaming",
       "status": "ok",
-      "records": 36,
+      "records": 37,
       "page": "QM Gaming"
     },
     {
@@ -15671,19 +15858,19 @@ window.dashboardData = {
     {
       "team": "Super Survivor Squad",
       "status": "ok",
-      "records": 20,
+      "records": 22,
       "page": "Super Survivor Squad"
     },
     {
       "team": "TakeMeAway Gaming",
       "status": "ok",
-      "records": 19,
+      "records": 20,
       "page": "TakeMeAway Gaming"
     },
     {
       "team": "Tianba",
       "status": "ok",
-      "records": 97,
+      "records": 98,
       "page": "Tianba"
     },
     {
@@ -15695,7 +15882,7 @@ window.dashboardData = {
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 82,
+      "records": 83,
       "page": "TYLOO"
     },
     {
@@ -15719,7 +15906,7 @@ window.dashboardData = {
     {
       "team": "Weibo Gaming",
       "status": "ok",
-      "records": 46,
+      "records": 48,
       "page": "Weibo Gaming"
     }
   ]
