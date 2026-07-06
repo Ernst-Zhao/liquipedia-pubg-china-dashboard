@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29",
+  "generatedAt": "2026-07-06",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -4298,6 +4298,17 @@
     },
     {
       "date": "2023-09-08",
+      "team": "China",
+      "place": "5th",
+      "tier": "B-Tier",
+      "event": "Tianming Cup Expedition Season 3",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/Tianming_Cup_Expedition/Season_3",
+      "source": "https://liquipedia.net/pubg/China/Results"
+    },
+    {
+      "date": "2023-09-08",
       "team": "Change The Game",
       "place": "8th",
       "tier": "B-Tier",
@@ -4372,6 +4383,17 @@
       "prizeRaw": "$138",
       "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp/2023/Season_5/Phase_3",
       "source": "https://liquipedia.net/pubg/DD_Team/Results"
+    },
+    {
+      "date": "2023-09-01",
+      "team": "China",
+      "place": "7th",
+      "tier": "D-Tier",
+      "event": "BOSS Training Camp Season 5 Phase 3",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp/2023/Season_5/Phase_3",
+      "source": "https://liquipedia.net/pubg/China/Results"
     },
     {
       "date": "2023-09-01",
@@ -4515,6 +4537,17 @@
       "prizeRaw": "$69",
       "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp/2023/Season_5/Phase_1",
       "source": "https://liquipedia.net/pubg/DD_Team/Results"
+    },
+    {
+      "date": "2023-08-26",
+      "team": "China",
+      "place": "5th",
+      "tier": "D-Tier",
+      "event": "BOSS Training Camp Season 5 Phase 1",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/BOSS_Training_Camp/2023/Season_5/Phase_1",
+      "source": "https://liquipedia.net/pubg/China/Results"
     },
     {
       "date": "2023-08-26",
@@ -15744,7 +15777,7 @@
     {
       "team": "China",
       "status": "ok",
-      "records": 10,
+      "records": 13,
       "page": "China"
     },
     {
