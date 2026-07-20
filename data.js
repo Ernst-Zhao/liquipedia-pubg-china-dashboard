@@ -1,5 +1,5 @@
 window.dashboardData = {
-  "generatedAt": "2026-07-13",
+  "generatedAt": "2026-07-20",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -363,7 +363,7 @@ window.dashboardData = {
       "team": "Anyone's Legend",
       "place": "1st",
       "tier": "A-Tier",
-      "event": "PUBG Vietnam Series Finals 2026 Phase 1",
+      "event": "PUBG Vietnam Series 2026 Phase 1",
       "prize": 11500.0,
       "prizeRaw": "$11,500",
       "eventUrl": "https://liquipedia.net/pubg/PUBG_Vietnam_Series/2026/Phase_1",
