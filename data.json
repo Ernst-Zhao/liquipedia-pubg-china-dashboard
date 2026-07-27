@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20",
+  "generatedAt": "2026-07-27",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,72 @@
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-07-26",
+      "team": "TYLOO",
+      "place": "22nd",
+      "tier": "S-Tier",
+      "event": "Esports World Cup 2026",
+      "prize": 12000.0,
+      "prizeRaw": "$12,000",
+      "eventUrl": "https://liquipedia.net/pubg/Esports_World_Cup/2026",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2026-07-26",
+      "team": "Petrichor Road",
+      "place": "23rd",
+      "tier": "S-Tier",
+      "event": "Esports World Cup 2026",
+      "prize": 11000.0,
+      "prizeRaw": "$11,000",
+      "eventUrl": "https://liquipedia.net/pubg/Esports_World_Cup/2026",
+      "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
+    },
+    {
+      "date": "2026-07-26",
+      "team": "JD Gaming",
+      "place": "17th",
+      "tier": "S-Tier",
+      "event": "Esports World Cup 2026",
+      "prize": 17000.0,
+      "prizeRaw": "$17,000",
+      "eventUrl": "https://liquipedia.net/pubg/Esports_World_Cup/2026",
+      "source": "https://liquipedia.net/pubg/JD_Gaming"
+    },
+    {
+      "date": "2026-07-26",
+      "team": "Four Angry Men",
+      "place": "24th",
+      "tier": "S-Tier",
+      "event": "Esports World Cup 2026",
+      "prize": 10000.0,
+      "prizeRaw": "$10,000",
+      "eventUrl": "https://liquipedia.net/pubg/Esports_World_Cup/2026",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2026-07-26",
+      "team": "Anyone's Legend",
+      "place": "14th",
+      "tier": "S-Tier",
+      "event": "Esports World Cup 2026",
+      "prize": 26000.0,
+      "prizeRaw": "$26,000",
+      "eventUrl": "https://liquipedia.net/pubg/Esports_World_Cup/2026",
+      "source": "https://liquipedia.net/pubg/Anyone's_Legend/Results"
+    },
+    {
+      "date": "2026-07-26",
+      "team": "17 Gaming",
+      "place": "11th",
+      "tier": "S-Tier",
+      "event": "Esports World Cup 2026",
+      "prize": 37500.0,
+      "prizeRaw": "$37,500",
+      "eventUrl": "https://liquipedia.net/pubg/Esports_World_Cup/2026",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
+    },
     {
       "date": "2026-06-28",
       "team": "China",
@@ -14110,17 +14176,6 @@
     },
     {
       "date": "2018-11-09",
-      "team": "JD Gaming",
-      "place": "20th",
-      "tier": "A-Tier",
-      "event": "Jingdong Cup Season 2",
-      "prize": 794.0,
-      "prizeRaw": "$794",
-      "eventUrl": "https://liquipedia.net/pubg/Jingdong_Cup/Season_2",
-      "source": "https://liquipedia.net/pubg/JD_Gaming"
-    },
-    {
-      "date": "2018-11-09",
       "team": "Four Angry Men",
       "place": "2nd",
       "tier": "A-Tier",
@@ -15747,7 +15802,7 @@
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 111,
+      "records": 112,
       "page": "17 Gaming"
     },
     {
@@ -15759,7 +15814,7 @@
     {
       "team": "Anyone's Legend",
       "status": "ok",
-      "records": 32,
+      "records": 33,
       "page": "Anyone's Legend"
     },
     {
@@ -15801,7 +15856,7 @@
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 143,
+      "records": 144,
       "page": "Four Angry Men"
     },
     {
@@ -15867,7 +15922,7 @@
     {
       "team": "Petrichor Road",
       "status": "ok",
-      "records": 106,
+      "records": 107,
       "page": "Petrichor Road"
     },
     {
@@ -15915,7 +15970,7 @@
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 83,
+      "records": 84,
       "page": "TYLOO"
     },
     {
