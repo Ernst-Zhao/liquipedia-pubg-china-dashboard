@@ -25,7 +25,7 @@ https://ernst-zhao.github.io/liquipedia-pubg-china-dashboard/
 
 ## 自动更新
 
-GitHub Actions 每周一北京时间 08:00 自动同步 Liquipedia 数据，也可以在仓库的 Actions 页面手动运行。
+GitHub Actions 每周一自动同步 Liquipedia 数据，也可以在仓库的 Actions 页面手动运行。GitHub 定时任务可能有排队延迟，因此实际开始时间可能晚于计划时间；网站顶部会显示 `DATA UPDATED` 和 `LATEST MATCH`，分别表示数据文件更新时间和最新赛事日期。
 
 更新过程：
 

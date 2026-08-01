@@ -163,7 +163,8 @@
         <p class="lead">基于 Liquipedia PUBG Wiki 团队页与 Results 页整理。聚焦端游 PUBG，不包含 PUBG Mobile / 和平精英；奖金统一按页面标注的美元值展示。</p>
       </div>
       <div class="stamp">
-        DATA SNAPSHOT<br><b>2026-06-08</b><br>
+        DATA UPDATED<br><b id="dataUpdatedAt">-</b><br>
+        LATEST MATCH<br><b id="latestMatchDate">-</b><br>
         CURRENCY<br>
         <div class="currency-switch" id="currencySwitch">
           <button class="currency-btn active" data-currency="USD">USD</button>
@@ -174,7 +175,7 @@
     </header>
 
     <div class="notice">
-      同步完成：Liquipedia “Chinese Teams” 分类中的 34 支队伍均已有年度奖金数据，共 1,393 条赛事记录。32 支来自完整 Results 页面；EDward Gaming 和 JD Gaming 因没有独立 Results 子页，使用官方 Overview 成绩表。
+      同步完成：Liquipedia “Chinese Teams” 分类中的 <span id="noticeTeamCount">-</span> 支队伍均已有年度奖金数据，共 <span id="noticeRecordCount">-</span> 条赛事记录。大多数队伍来自完整 Results 页面；EDward Gaming 和 JD Gaming 因没有独立 Results 子页，使用官方 Overview 成绩表。
     </div>
 
     <section class="grid kpis">
@@ -186,7 +187,7 @@
 
     <section class="grid main">
       <article class="panel">
-        <div class="panel-head"><h2>中国战队年度奖金趋势</h2><span class="panel-note">34 支队伍 / 1,393 条记录</span></div>
+        <div class="panel-head"><h2>中国战队年度奖金趋势</h2><span class="panel-note" id="trendNote">-</span></div>
         <svg id="trend" viewBox="0 0 760 310" preserveAspectRatio="none"></svg>
       </article>
       <article class="panel">
@@ -214,7 +215,7 @@
         </div>
         <div class="context-tip">
           <strong>为什么会有差额？</strong>
-          当前统计总计是截至 2026-06-08 的 Results / Overview 赛事奖金逐条求和；排名页快照来自较早的 Organization Money Ranking 索引。两者可能因更新时间、旧赛事或附加奖金收录、战队更名与页面修订不同而产生差异。正数通常表示当前明细包含较新赛事，负数通常表示排名页包含当前成绩表未展开的历史或附加项目；约 ±$1 的差异多为历史汇率换算或取整。
+          当前统计总计是截至 <span id="matrixDataDate">-</span> 的 Results / Overview 赛事奖金逐条求和；排名页快照来自较早的 Organization Money Ranking 索引。两者可能因更新时间、旧赛事或附加奖金收录、战队更名与页面修订不同而产生差异。正数通常表示当前明细包含较新赛事，负数通常表示排名页包含当前成绩表未展开的历史或附加项目；约 ±$1 的差异多为历史汇率换算或取整。
         </div>
         <div class="matrix-wrap">
           <table class="matrix">
@@ -352,6 +353,7 @@
     const rows = window.dashboardData.records;
     const teamTotals = window.dashboardData.teamTotals;
     const annualOverrides = window.dashboardData.annualOverrides || {};
+    const latestMatchDate = rows.reduce((latest,d) => d.date > latest ? d.date : latest, "");
     const fullResultTeams = new Set(window.dashboardData.coverage.filter(d => d.status === "ok").map(d => d.team));
     const overviewTeams = new Set(window.dashboardData.coverage.filter(d => d.status === "overview").map(d => d.team));
     const syncedTeams = new Set([...fullResultTeams, ...overviewTeams]);
@@ -409,6 +411,12 @@
     document.querySelector("#eventCount").textContent = rows.length;
     document.querySelector("#winCount").textContent = rows.filter(d=>d.place==="1st").length;
     document.querySelector("#teamCount").textContent = teams.length;
+    document.querySelector("#dataUpdatedAt").textContent = window.dashboardData.generatedAt || "-";
+    document.querySelector("#latestMatchDate").textContent = latestMatchDate || "-";
+    document.querySelector("#noticeTeamCount").textContent = teams.length;
+    document.querySelector("#noticeRecordCount").textContent = rows.length.toLocaleString("en-US");
+    document.querySelector("#trendNote").textContent = `${teams.length} 支队伍 / ${rows.length.toLocaleString("en-US")} 条记录`;
+    document.querySelector("#matrixDataDate").textContent = window.dashboardData.generatedAt || "-";
 
     const fillSelect = (id, values) => {
       const el = document.querySelector(id);
