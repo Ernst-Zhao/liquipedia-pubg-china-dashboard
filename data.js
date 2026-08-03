@@ -1,5 +1,5 @@
 window.dashboardData = {
-  "generatedAt": "2026-07-27",
+  "generatedAt": "2026-08-03",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,39 @@ window.dashboardData = {
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-08-02",
+      "team": "JD Gaming",
+      "place": "12th",
+      "tier": "S-Tier",
+      "event": "Games of the Future 2026",
+      "prize": 25000.0,
+      "prizeRaw": "$25,000",
+      "eventUrl": "https://liquipedia.net/pubg/Games_of_the_Future/2026",
+      "source": "https://liquipedia.net/pubg/JD_Gaming"
+    },
+    {
+      "date": "2026-08-02",
+      "team": "Anyone's Legend",
+      "place": "7th",
+      "tier": "S-Tier",
+      "event": "Games of the Future 2026",
+      "prize": 55000.0,
+      "prizeRaw": "$55,000",
+      "eventUrl": "https://liquipedia.net/pubg/Games_of_the_Future/2026",
+      "source": "https://liquipedia.net/pubg/Anyone's_Legend/Results"
+    },
+    {
+      "date": "2026-08-02",
+      "team": "17 Gaming",
+      "place": "1st",
+      "tier": "S-Tier",
+      "event": "Games of the Future 2026",
+      "prize": 300000.0,
+      "prizeRaw": "$300,000",
+      "eventUrl": "https://liquipedia.net/pubg/Games_of_the_Future/2026",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
+    },
     {
       "date": "2026-07-26",
       "team": "TYLOO",
@@ -1149,17 +1182,6 @@ window.dashboardData = {
       "prizeRaw": "$2,500",
       "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2025/9",
       "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
-    },
-    {
-      "date": "2025-10-19",
-      "team": "JD Gaming",
-      "place": "22nd",
-      "tier": "S-Tier",
-      "event": "PUBG Global Series 9 2025",
-      "prize": 2000.0,
-      "prizeRaw": "$2,000",
-      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2025/9",
-      "source": "https://liquipedia.net/pubg/JD_Gaming"
     },
     {
       "date": "2025-10-19",
@@ -15802,7 +15824,7 @@ window.dashboardData = {
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 112,
+      "records": 113,
       "page": "17 Gaming"
     },
     {
@@ -15814,7 +15836,7 @@ window.dashboardData = {
     {
       "team": "Anyone's Legend",
       "status": "ok",
-      "records": 33,
+      "records": 34,
       "page": "Anyone's Legend"
     },
     {
