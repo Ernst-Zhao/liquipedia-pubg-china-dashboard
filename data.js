@@ -1,5 +1,5 @@
 window.dashboardData = {
-  "generatedAt": "2026-08-03",
+  "generatedAt": "2026-08-10",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,61 @@ window.dashboardData = {
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-08-09",
+      "team": "TYLOO",
+      "place": "20th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 1",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_1",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2026-08-09",
+      "team": "Petrichor Road",
+      "place": "8th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 1",
+      "prize": 2000.0,
+      "prizeRaw": "$2,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_1",
+      "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
+    },
+    {
+      "date": "2026-08-09",
+      "team": "Four Angry Men",
+      "place": "21st",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 1",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_1",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2026-08-09",
+      "team": "Anyone's Legend",
+      "place": "10th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 1",
+      "prize": 1000.0,
+      "prizeRaw": "$1,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_1",
+      "source": "https://liquipedia.net/pubg/Anyone's_Legend/Results"
+    },
+    {
+      "date": "2026-08-09",
+      "team": "17 Gaming",
+      "place": "6th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 1",
+      "prize": 3000.0,
+      "prizeRaw": "$3,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_1",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
+    },
     {
       "date": "2026-08-02",
       "team": "JD Gaming",
@@ -1001,10 +1056,10 @@ window.dashboardData = {
       "team": "Petrichor Road",
       "place": "15th",
       "tier": "A-Tier",
-      "event": "PUBG Players Masters Invitational",
+      "event": "PUBG Players Masters Invitational 2025",
       "prize": 5000.0,
       "prizeRaw": "$5,000",
-      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational/2025",
       "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
     },
     {
@@ -1012,10 +1067,10 @@ window.dashboardData = {
       "team": "JD Gaming",
       "place": "7th",
       "tier": "A-Tier",
-      "event": "PUBG Players Masters Invitational",
+      "event": "PUBG Players Masters Invitational 2025",
       "prize": 7100.0,
       "prizeRaw": "$7,100",
-      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational/2025",
       "source": "https://liquipedia.net/pubg/JD_Gaming"
     },
     {
@@ -1023,10 +1078,10 @@ window.dashboardData = {
       "team": "Four Angry Men",
       "place": "16th",
       "tier": "A-Tier",
-      "event": "PUBG Players Masters Invitational",
+      "event": "PUBG Players Masters Invitational 2025",
       "prize": 2900.0,
       "prizeRaw": "$2,900",
-      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational/2025",
       "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
     },
     {
@@ -1034,10 +1089,10 @@ window.dashboardData = {
       "team": "Anyone's Legend",
       "place": "12th",
       "tier": "A-Tier",
-      "event": "PUBG Players Masters Invitational",
+      "event": "PUBG Players Masters Invitational 2025",
       "prize": 7000.0,
       "prizeRaw": "$7,000",
-      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational/2025",
       "source": "https://liquipedia.net/pubg/Anyone's_Legend/Results"
     },
     {
@@ -1045,10 +1100,10 @@ window.dashboardData = {
       "team": "17 Gaming",
       "place": "4th",
       "tier": "A-Tier",
-      "event": "PUBG Players Masters Invitational",
+      "event": "PUBG Players Masters Invitational 2025",
       "prize": 6500.0,
       "prizeRaw": "$6,500",
-      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Players_Masters_Invitational/2025",
       "source": "https://liquipedia.net/pubg/17_Gaming/Results"
     },
     {
@@ -15824,7 +15879,7 @@ window.dashboardData = {
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 113,
+      "records": 114,
       "page": "17 Gaming"
     },
     {
@@ -15836,7 +15891,7 @@ window.dashboardData = {
     {
       "team": "Anyone's Legend",
       "status": "ok",
-      "records": 34,
+      "records": 35,
       "page": "Anyone's Legend"
     },
     {
@@ -15878,7 +15933,7 @@ window.dashboardData = {
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 144,
+      "records": 145,
       "page": "Four Angry Men"
     },
     {
@@ -15944,7 +15999,7 @@ window.dashboardData = {
     {
       "team": "Petrichor Road",
       "status": "ok",
-      "records": 107,
+      "records": 108,
       "page": "Petrichor Road"
     },
     {
@@ -15992,7 +16047,7 @@ window.dashboardData = {
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 84,
+      "records": 85,
       "page": "TYLOO"
     },
     {
