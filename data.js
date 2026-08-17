@@ -1,5 +1,5 @@
 window.dashboardData = {
-  "generatedAt": "2026-08-10",
+  "generatedAt": "2026-08-17",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,61 @@ window.dashboardData = {
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-08-16",
+      "team": "TYLOO",
+      "place": "20th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 2",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_2",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2026-08-16",
+      "team": "Petrichor Road",
+      "place": "7th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 2",
+      "prize": 3000.0,
+      "prizeRaw": "$3,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_2",
+      "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
+    },
+    {
+      "date": "2026-08-16",
+      "team": "Four Angry Men",
+      "place": "18th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 2",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_2",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2026-08-16",
+      "team": "Anyone's Legend",
+      "place": "10th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 2",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_2",
+      "source": "https://liquipedia.net/pubg/Anyone's_Legend/Results"
+    },
+    {
+      "date": "2026-08-16",
+      "team": "17 Gaming",
+      "place": "1st",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series 2",
+      "prize": 33000.0,
+      "prizeRaw": "$33,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_2",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
+    },
     {
       "date": "2026-08-09",
       "team": "TYLOO",
@@ -199,8 +254,8 @@ window.dashboardData = {
       "place": "4th",
       "tier": "S-Tier",
       "event": "PUBG Nations Cup 2026",
-      "prize": 30000.0,
-      "prizeRaw": "$30,000",
+      "prize": 57578.0,
+      "prizeRaw": "$57,578",
       "eventUrl": "https://liquipedia.net/pubg/PUBG_Nations_Cup/2026",
       "source": "https://liquipedia.net/pubg/China/Results"
     },
@@ -15879,7 +15934,7 @@ window.dashboardData = {
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 114,
+      "records": 115,
       "page": "17 Gaming"
     },
     {
@@ -15891,7 +15946,7 @@ window.dashboardData = {
     {
       "team": "Anyone's Legend",
       "status": "ok",
-      "records": 35,
+      "records": 36,
       "page": "Anyone's Legend"
     },
     {
@@ -15933,7 +15988,7 @@ window.dashboardData = {
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 145,
+      "records": 146,
       "page": "Four Angry Men"
     },
     {
@@ -15999,7 +16054,7 @@ window.dashboardData = {
     {
       "team": "Petrichor Road",
       "status": "ok",
-      "records": 108,
+      "records": 109,
       "page": "Petrichor Road"
     },
     {
@@ -16047,7 +16102,7 @@ window.dashboardData = {
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 85,
+      "records": 86,
       "page": "TYLOO"
     },
     {
