@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17",
+  "generatedAt": "2026-08-31",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,61 @@
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-08-23",
+      "team": "TYLOO",
+      "place": "20th",
+      "tier": "S-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series Final",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_Final",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2026-08-23",
+      "team": "Petrichor Road",
+      "place": "14th",
+      "tier": "S-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series Final",
+      "prize": 4000.0,
+      "prizeRaw": "$4,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_Final",
+      "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
+    },
+    {
+      "date": "2026-08-23",
+      "team": "Four Angry Men",
+      "place": "15th",
+      "tier": "S-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series Final",
+      "prize": 3000.0,
+      "prizeRaw": "$3,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_Final",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2026-08-23",
+      "team": "Anyone's Legend",
+      "place": "9th",
+      "tier": "S-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series Final",
+      "prize": 6000.0,
+      "prizeRaw": "$6,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_Final",
+      "source": "https://liquipedia.net/pubg/Anyone's_Legend/Results"
+    },
+    {
+      "date": "2026-08-23",
+      "team": "17 Gaming",
+      "place": "10th",
+      "tier": "S-Tier",
+      "event": "PUBG Global Series 2026 Circuit 3 Series Final",
+      "prize": 7000.0,
+      "prizeRaw": "$7,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_3/Series_Final",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
+    },
     {
       "date": "2026-08-16",
       "team": "TYLOO",
@@ -15934,7 +15989,7 @@
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 115,
+      "records": 116,
       "page": "17 Gaming"
     },
     {
@@ -15946,7 +16001,7 @@
     {
       "team": "Anyone's Legend",
       "status": "ok",
-      "records": 36,
+      "records": 37,
       "page": "Anyone's Legend"
     },
     {
@@ -15988,7 +16043,7 @@
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 146,
+      "records": 147,
       "page": "Four Angry Men"
     },
     {
@@ -16054,7 +16109,7 @@
     {
       "team": "Petrichor Road",
       "status": "ok",
-      "records": 109,
+      "records": 110,
       "page": "Petrichor Road"
     },
     {
@@ -16102,7 +16157,7 @@
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 86,
+      "records": 87,
       "page": "TYLOO"
     },
     {
