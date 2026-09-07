@@ -1,5 +1,5 @@
 window.dashboardData = {
-  "generatedAt": "2026-08-31",
+  "generatedAt": "2026-09-07",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
