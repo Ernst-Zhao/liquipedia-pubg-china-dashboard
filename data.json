@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14",
+  "generatedAt": "2026-09-21",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,17 @@
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-09-20",
+      "team": "China",
+      "place": "1st - 6th",
+      "tier": "Showmatch",
+      "event": "PUBG Asia Stars 2026",
+      "prize": 25000.0,
+      "prizeRaw": "$25,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Asia_Stars/2026",
+      "source": "https://liquipedia.net/pubg/China/Results"
+    },
     {
       "date": "2026-08-23",
       "team": "TYLOO",
@@ -11307,7 +11318,7 @@
       "date": "2020-05-03",
       "team": "Multi Circle Gaming",
       "place": "11th",
-      "tier": "C-Tier",
+      "tier": "Qualifier",
       "event": "PUBG Champions League 2020: Summer Preseason",
       "prize": 0,
       "prizeRaw": "-",
@@ -11318,7 +11329,7 @@
       "date": "2020-05-03",
       "team": "Games Forever Young",
       "place": "9th",
-      "tier": "C-Tier",
+      "tier": "Qualifier",
       "event": "PUBG Champions League 2020: Summer Preseason",
       "prize": 0,
       "prizeRaw": "-",
@@ -11560,7 +11571,7 @@
       "date": "2020-03-29",
       "team": "Crystal Luster",
       "place": "6th",
-      "tier": "C-Tier",
+      "tier": "Qualifier",
       "event": "PUBG Champions League 2020: Spring Preseason",
       "prize": 0,
       "prizeRaw": "-",
@@ -16019,7 +16030,7 @@
     {
       "team": "China",
       "status": "ok",
-      "records": 13,
+      "records": 14,
       "page": "China"
     },
     {
