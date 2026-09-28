@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21",
+  "generatedAt": "2026-09-28",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -40,9 +40,86 @@
   "annualOverrides": {},
   "records": [
     {
+      "date": "2026-09-27",
+      "team": "TYLOO",
+      "place": "9th",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 13108.0,
+      "prizeRaw": "$13,108",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2026-09-27",
+      "team": "Petrichor Road",
+      "place": "4th",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 33963.0,
+      "prizeRaw": "$33,963",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
+    },
+    {
+      "date": "2026-09-27",
+      "team": "NewHappy",
+      "place": "6th",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 19737.0,
+      "prizeRaw": "$19,737",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/NewHappy/Results"
+    },
+    {
+      "date": "2026-09-27",
+      "team": "JD Gaming",
+      "place": "15th",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 3575.0,
+      "prizeRaw": "$3,575",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/JD_Gaming"
+    },
+    {
+      "date": "2026-09-27",
+      "team": "Four Angry Men",
+      "place": "1st",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 121551.0,
+      "prizeRaw": "$121,551",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2026-09-27",
+      "team": "EDward Gaming",
+      "place": "3rd",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 47518.0,
+      "prizeRaw": "$47,518",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/EDward_Gaming"
+    },
+    {
+      "date": "2026-09-27",
+      "team": "Change The Game",
+      "place": "22nd",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 745.0,
+      "prizeRaw": "$745",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/Change_The_Game/Results"
+    },
+    {
       "date": "2026-09-20",
       "team": "China",
-      "place": "1st - 6th",
+      "place": "DNF",
       "tier": "Showmatch",
       "event": "PUBG Asia Stars 2026",
       "prize": 25000.0,
@@ -12427,17 +12504,6 @@
     },
     {
       "date": "2019-12-10",
-      "team": "EDward Gaming",
-      "place": "12th",
-      "tier": "A-Tier",
-      "event": "WEGL Weibo Cup 2019 Winter",
-      "prize": 0,
-      "prizeRaw": "-",
-      "eventUrl": "https://liquipedia.net/pubg/WEGL_Weibo_Cup/2019_Winter",
-      "source": "https://liquipedia.net/pubg/EDward_Gaming"
-    },
-    {
-      "date": "2019-12-10",
       "team": "Black Ananas",
       "place": "7th",
       "tier": "A-Tier",
@@ -14561,17 +14627,6 @@
     },
     {
       "date": "2018-09-30",
-      "team": "JD Gaming",
-      "place": "7th",
-      "tier": "A-Tier",
-      "event": "Bausch+Lomb ImbaTV Super League",
-      "prize": 1456.0,
-      "prizeRaw": "$1,456",
-      "eventUrl": "https://liquipedia.net/pubg/ImbaTV/Superleague",
-      "source": "https://liquipedia.net/pubg/JD_Gaming"
-    },
-    {
-      "date": "2018-09-30",
       "team": "Four Angry Men",
       "place": "6th",
       "tier": "A-Tier",
@@ -16024,7 +16079,7 @@
     {
       "team": "Change The Game",
       "status": "ok",
-      "records": 88,
+      "records": 89,
       "page": "Change The Game"
     },
     {
@@ -16054,7 +16109,7 @@
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 147,
+      "records": 148,
       "page": "Four Angry Men"
     },
     {
@@ -16108,7 +16163,7 @@
     {
       "team": "NewHappy",
       "status": "ok",
-      "records": 99,
+      "records": 100,
       "page": "NewHappy"
     },
     {
@@ -16120,7 +16175,7 @@
     {
       "team": "Petrichor Road",
       "status": "ok",
-      "records": 110,
+      "records": 111,
       "page": "Petrichor Road"
     },
     {
@@ -16168,7 +16223,7 @@
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 87,
+      "records": 88,
       "page": "TYLOO"
     },
     {
