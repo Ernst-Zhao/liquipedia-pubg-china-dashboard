@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28",
+  "generatedAt": "2026-10-05",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,17 @@
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-09-27",
+      "team": "Weibo Gaming",
+      "place": "11th",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 6256.0,
+      "prizeRaw": "$6,256",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/Weibo_Gaming/Results"
+    },
     {
       "date": "2026-09-27",
       "team": "TYLOO",
@@ -115,6 +126,17 @@
       "prizeRaw": "$745",
       "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
       "source": "https://liquipedia.net/pubg/Change_The_Game/Results"
+    },
+    {
+      "date": "2026-09-27",
+      "team": "17 Gaming",
+      "place": "2nd",
+      "tier": "A-Tier",
+      "event": "PUBG Champions League 2026: Autumn",
+      "prize": 84013.0,
+      "prizeRaw": "$84,013",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Champions_League/2026/Autumn",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
     },
     {
       "date": "2026-09-20",
@@ -16055,7 +16077,7 @@
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 116,
+      "records": 117,
       "page": "17 Gaming"
     },
     {
@@ -16247,7 +16269,7 @@
     {
       "team": "Weibo Gaming",
       "status": "ok",
-      "records": 48,
+      "records": 49,
       "page": "Weibo Gaming"
     }
   ]
