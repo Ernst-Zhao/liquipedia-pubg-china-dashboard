@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12",
+  "generatedAt": "2026-10-19",
   "teamTotalsSnapshot": "Liquipedia Organization Money Ranking, indexed 2026-02",
   "teamTotals": {
     "1246": 47851,
@@ -39,6 +39,61 @@
   },
   "annualOverrides": {},
   "records": [
+    {
+      "date": "2026-10-18",
+      "team": "TYLOO",
+      "place": "11th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 4 Series 1",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_4/Series_1",
+      "source": "https://liquipedia.net/pubg/TYLOO/Results"
+    },
+    {
+      "date": "2026-10-18",
+      "team": "Petrichor Road",
+      "place": "17th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 4 Series 1",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_4/Series_1",
+      "source": "https://liquipedia.net/pubg/Petrichor_Road/Results"
+    },
+    {
+      "date": "2026-10-18",
+      "team": "Four Angry Men",
+      "place": "15th",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 4 Series 1",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_4/Series_1",
+      "source": "https://liquipedia.net/pubg/Four_Angry_Men/Results"
+    },
+    {
+      "date": "2026-10-18",
+      "team": "Anyone's Legend",
+      "place": "23rd",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 4 Series 1",
+      "prize": 0,
+      "prizeRaw": "-",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_4/Series_1",
+      "source": "https://liquipedia.net/pubg/Anyone's_Legend/Results"
+    },
+    {
+      "date": "2026-10-18",
+      "team": "17 Gaming",
+      "place": "3rd",
+      "tier": "A-Tier",
+      "event": "PUBG Global Series 2026 Circuit 4 Series 1",
+      "prize": 10000.0,
+      "prizeRaw": "$10,000",
+      "eventUrl": "https://liquipedia.net/pubg/PUBG_Global_Series/2026/Circuit_4/Series_1",
+      "source": "https://liquipedia.net/pubg/17_Gaming/Results"
+    },
     {
       "date": "2026-10-08",
       "team": "Anyone's Legend",
@@ -16077,7 +16132,7 @@
     {
       "team": "17 Gaming",
       "status": "ok",
-      "records": 117,
+      "records": 118,
       "page": "17 Gaming"
     },
     {
@@ -16089,7 +16144,7 @@
     {
       "team": "Anyone's Legend",
       "status": "ok",
-      "records": 38,
+      "records": 39,
       "page": "Anyone's Legend"
     },
     {
@@ -16131,7 +16186,7 @@
     {
       "team": "Four Angry Men",
       "status": "ok",
-      "records": 148,
+      "records": 149,
       "page": "Four Angry Men"
     },
     {
@@ -16197,7 +16252,7 @@
     {
       "team": "Petrichor Road",
       "status": "ok",
-      "records": 111,
+      "records": 112,
       "page": "Petrichor Road"
     },
     {
@@ -16245,7 +16300,7 @@
     {
       "team": "TYLOO",
       "status": "ok",
-      "records": 88,
+      "records": 89,
       "page": "TYLOO"
     },
     {
